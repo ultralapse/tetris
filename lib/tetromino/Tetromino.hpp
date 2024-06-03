@@ -11,7 +11,7 @@ Z piece - red: RGB(255, 0, 0)
 T piece - purple: RGB(128, 0, 128)
 */
 enum Color {
-    O = 1, I, L, J, S, Z, T
+    Y = 1, C, B, O, G, R, P
 };
 
 class Tetromino {

@@ -3,6 +3,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
 #include "../lib/Board.hpp"
@@ -12,8 +13,13 @@
 
 using std::vector;
 
-class Game: sf::Drawable {
-    void draw(sf::RenderTarget& target, sf::RenderStates states) const {
+class Game: public sf::Drawable {
+ private:
+    Board b;
 
-    }
+ public:
+    Game(int sq): b(sq) {};
+
+ protected:
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

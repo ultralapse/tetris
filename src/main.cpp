@@ -6,17 +6,27 @@
 
 #include "Game.hpp"
 
-#define HEIGHT 800
-#define WIDTH 600
+#define HEIGHT 20
+#define WIDTH 10
 
 int main(int argc, char **argv) {
-    sf::Window window(sf::VideoMode(HEIGHT, WIDTH), "Tetris");
+
+
+    int square_size = std::stoi(argv[1]);
+
+    int height = HEIGHT * square_size;
+    int width = WIDTH * square_size;
+
+    sf::RenderWindow window(sf::VideoMode(width, height), "Tetris");
+    Game g(square_size);
 
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) window.close();
         }
+        window.draw(g);
+        window.display();
     }
     return 0;
 }
