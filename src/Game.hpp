@@ -18,7 +18,7 @@ class Game: public sf::Drawable {
     Board b;
 
  public:
-    Game(int sq): b(sq) {};
+    explicit Game(int sq): b(sq) {}
 
  protected:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;

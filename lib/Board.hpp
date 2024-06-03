@@ -41,7 +41,7 @@ class Board: public sf::Drawable {
     void write();
 
  public:
-    Board(int sq) : board(BOARD_ROWS * BOARD_COLS), _sq(sq) {}
+    explicit Board(int sq) : board(BOARD_ROWS * BOARD_COLS), _sq(sq) {}
 
     // Makes pieces fall
     bool update();
@@ -53,6 +53,5 @@ class Board: public sf::Drawable {
     bool right();
 
  protected:
-   virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

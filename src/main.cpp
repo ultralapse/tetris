@@ -10,8 +10,6 @@
 #define WIDTH 10
 
 int main(int argc, char **argv) {
-
-
     int square_size = std::stoi(argv[1]);
 
     int height = HEIGHT * square_size;
