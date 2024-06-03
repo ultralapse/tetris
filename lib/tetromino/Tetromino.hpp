@@ -1,5 +1,6 @@
 // Copyright (2024) ultralapse
 #pragma once
+#include <tuple>
 
 /*
 O Piece - yellow: RGB(255, 255, 0)
@@ -15,4 +16,8 @@ enum Color {
 };
 
 class Tetromino {
+ public:
+    virtual bool down() {return false;}
+    virtual bool lRotate() {return false;}
+    virtual bool rRotate() {return false;}
 };
